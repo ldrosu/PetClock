@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     const petLifeExpectancy: number = PET_SPECIES.find((p) => p.type === petFormData.type).lifeExpectancy;
     const humanLifeExpectancy = HUMAN.lifeExpectancy;
     const lifeExpectancyFactor = humanLifeExpectancy / petLifeExpectancy;
-    const ageText = this.momentService.ageText(petFormData.dateOfBirth, lifeExpectancyFactor);
+    const ageText = this.momentService.ageText(petFormData.dateOfBirth, lifeExpectancyFactor,true);
     this.snackBarMessage = `${petFormData.name}, the ${petFormData.type}, is ${ageText} old!`;
   }
 
