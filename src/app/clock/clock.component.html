@@ -54,7 +54,7 @@
     <g *ngFor="let el of geometry.subDays.data; let i=index;">
       <path [attr.d]="el.textPath" [attr.id]="'daysText'+category+i" fill="none"></path>
       <text>
-      <textPath [attr.href]="'#daysText'+category+i" 
+      <textPath [attr.xlink:href]="'#daysText'+category+i" 
         font-size="3" 
         font-family="sans-serif" 
         [attr.fill]="colorScheme.daysText" 

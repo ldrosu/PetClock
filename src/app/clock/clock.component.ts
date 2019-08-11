@@ -93,7 +93,7 @@ export class ClockComponent implements OnInit, AfterViewInit, AfterContentInit, 
   ngAfterViewInit() {
     const textPathElements: [] = this.daysTextGroupElement.nativeElement.querySelectorAll('textPath');
     for (let i = 0; i < textPathElements.length; i++) {
-      this.renderer.setAttribute(textPathElements[i], 'href', window.location.href + '#daysText' + this.category + i);
+      this.renderer.setAttribute(textPathElements[i], 'xlink:href', window.location.href + '#daysText' + this.category + i);
     }
   }
 
