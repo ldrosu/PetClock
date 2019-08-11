@@ -24,8 +24,8 @@ export class ClockComponent implements OnInit, AfterViewInit, AfterContentInit, 
   @ViewChild('secondHand') secondHandElement: ElementRef;
   @ViewChild('daysText') daysTextGroupElement: ElementRef;
 
-  private imagePath;
-  private colorScheme: ColorScheme;
+  public imagePath;
+  public colorScheme: ColorScheme;
   private colorSchemeSubscriber: any;
   @select('colorScheme') colorSchemeObservable: Observable<ColorScheme>;
 
@@ -36,8 +36,8 @@ export class ClockComponent implements OnInit, AfterViewInit, AfterContentInit, 
   private step: number;
   private PET_SPECIES: Species[] = PET_SPECIES;
   readonly human: Species = HUMAN;
-  private cursiveName = 'You'; // Default human
-  private geometry: Geometry;
+  public cursiveName = 'You'; // Default human
+  public geometry: Geometry;
 
   constructor(private d3Service: D3Service, private renderer: Renderer2) {
   }

@@ -15,12 +15,12 @@ import { Observable} from 'rxjs';
 })
 export class PetFormComponent implements OnInit, OnDestroy {
 
-  private petTypes: string[];
-  private minDate;
-  private maxDate;
-  private ageText;
+  public petTypes: string[];
+  public minDate;
+  public maxDate;
+  public ageText;
 
-  private petForm: FormGroup;
+  public petForm: FormGroup;
   private petFormDataSubscriber: any;
   private petFormData: PetFormData;
 
