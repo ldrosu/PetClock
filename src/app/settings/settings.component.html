@@ -6,7 +6,7 @@
         <button mat-raised-button (click)="setColorScheme(i)" (click)="colorSchemeSelected()">
           {{scheme.name}}
           <span *ngIf="i==selectedIndex">
-            <img width="20px" src="../../assets/images/selected.png"/>
+            <img width="20px" src="assets/images/selected.png"/>
           </span>
           <div>
             <span class="colorbox" [style.background-color]="scheme.dial"></span>
