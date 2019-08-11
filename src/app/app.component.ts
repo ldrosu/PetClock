@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, AfterViewInit } from '@angular/core';
+import { MomentService } from './moment/moment.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PetClock';
+  constructor() {
+  }
 }
+
+
+
+
+
+

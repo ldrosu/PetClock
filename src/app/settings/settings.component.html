@@ -1,0 +1,23 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="500px" fxFlex.xs="100%">
+    <mat-card-title>Select Colors</mat-card-title>
+    <mat-card-content>
+      <div *ngFor="let scheme of COLOR_SCHEMES;let i=index">
+        <button mat-raised-button (click)="setColorScheme(i)" (click)="colorSchemeSelected()">
+          {{scheme.name}}
+          <span *ngIf="i==selectedIndex">
+            <img width="20px" src="../../assets/images/selected.png"/>
+          </span>
+          <div>
+            <span class="colorbox" [style.background-color]="scheme.dial"></span>
+            <span class="colorbox" [style.background-color]="scheme.hourHand"></span>
+            <span class="colorbox" [style.background-color]="scheme.minuteHand"></span>
+            <span class="colorbox" [style.background-color]="scheme.days"></span>
+            <span class="colorbox" [style.background-color]="scheme.daysProgress"></span>
+
+          </div>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>

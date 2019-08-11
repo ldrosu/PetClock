@@ -1,0 +1,53 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="500px" fxFlex.xs="100%">
+    <form #form="ngForm"  [formGroup]="petForm" 
+      autocomplete="off" novalidate fxLayout="column wrap"
+      fxLayoutAlign="center center" fxLayoutGap="10px" >
+
+      <mat-card-title>Edit Pet Information</mat-card-title>
+      <mat-card-content> 
+          
+        <mat-form-field>
+          <input matInput type="text" placeholder="Pet's name"
+            formControlName="name" id="name" #name>
+          <mat-hint align="end">Not more then 20 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+          <mat-error *ngIf="hasError('name', 'maxlength')">You have more than 20 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select matInput placeholder = "Type" (selectionChange)="selectionChange($event)"
+            formControlName="type" id = "type" #type>
+              <mat-option *ngFor = "let pt of petTypes" [value] = "pt">
+                {{pt}}
+              </mat-option>
+          </mat-select>
+        </mat-form-field> 
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" 
+            [min]="minDate" [max]="maxDate"  
+            placeholder="Choose a date of birth" 
+            formControlName="dateOfBirth"
+            id="dateOfBirth"
+            (click)="picker.open()"
+            (dateChange)="dateChange($event)"
+            #datePicker>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>  
+        </mat-form-field>
+
+        <div *ngIf="ageText!=''">
+          {{name.value}} is {{ageText}} old.
+        </div>
+        
+        </mat-card-content>
+        <mat-card-actions align="center">
+          <button type="button" mat-raised-button color="primary" [disabled]="!petForm.valid" routerLink="/home" (click)="apply()">Apply</button>
+          <button type="button" mat-raised-button color="warn" routerLink="/home">Cancel</button>
+        </mat-card-actions>
+      </form> 
+    </mat-card>
+  </section>
+
+

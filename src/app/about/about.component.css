@@ -1,0 +1,9 @@
+p, ul{
+    margin-left:10%;
+    margin-right:10%;
+    font-size: 0.6em;
+    text-align: justify;    
+}
+p {
+    line-height: 1.2;
+}

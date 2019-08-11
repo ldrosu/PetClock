@@ -1,0 +1,68 @@
+<svg preserveAspectRatio="xMinYMid meet" viewBox="-50 -50 100 100">
+  <circle cx="0" cy="0" r="39" stroke-width="0" [attr.fill]="colorScheme.dial"></circle>
+  <image x="-4.5" y="-18" [attr.xlink:href]="imagePath" height="10" width="10"/>
+  <text class="cursive" x="0" y="14" text-anchor="middle" [attr.fill]="colorScheme.markings">
+    {{cursiveName}}
+  </text>
+  <g [attr.fill]="colorScheme.markings">
+  <g #majorHourMarks>
+    <g *ngFor="let i of geometry.majorHourMarks.angles">
+      <path d="M0 0 L3 1.5 A12 12 0 0 0 3 -1.5 Z" [attr.transform]="'rotate(' + i +') translate(35,0)'"/>
+    </g>
+  </g>
+  <g #minorHourMarks>
+    <g *ngFor="let i of geometry.minorHourMarks.angles">
+      <path d="M0 0 v0.6 h3 v-1.2 h-3 Z" [attr.transform]="'rotate(' + i +') translate(35,0)'"/>
+    </g>
+  </g>
+  <g #minuteMarks>
+    <g *ngFor="let i of geometry.minuteMarks.angles">
+      <path d="M0 0 v0.2 h2 v-0.4 h-2 Z" [attr.transform]="'rotate('+ i +') translate(36,0)'"/>
+    </g>
+  </g>
+  <g #hourNumbers>
+    <g *ngFor="let i of geometry.hourNumbers.data">
+      <text x="0" y="0" text-anchor="middle"  font-family="sans-serif" font-size="8" font-weight="bold"
+        [attr.transform]="'translate('+30*i.si+','+(-30*i.co+8*.35)+')'"
+      >{{i.hour}}</text>
+    </g>
+  </g>
+  </g> 
+  
+  <g #hourHand  [attr.fill]="colorScheme.hourHand">
+    <path d="M-2 2 A4,4 0,0,1 -2 -2 L20 -1 A2,2 0,0,1 20 1 Z"></path>
+  </g> 
+  
+  <g #minuteHand  [attr.fill]="colorScheme.minuteHand">
+    <path d="M-4 2 a4,4 0,0,1 0 -4 h4 v1 l33 0.5 a2,2 0,0,1 0 1 l-33 0.5 v1 Z"></path> 
+  </g>
+  <g #secondHand  [attr.fill]="colorScheme.secondHand">
+    <rect x="-8" y="-0.2" height="0.4" width="46"></rect>
+    <circle cx="-4" cy="0" r="1.25"></circle>  
+  </g>
+  <g #daysToday [attr.fill]="colorScheme.days">
+    <g *ngFor="let i of geometry.subDays.data">
+      <path [attr.d]="i.path"></path>
+    </g>
+  </g>
+  <g #daysProgress [attr.fill]="colorScheme.daysProgress">
+    <g *ngFor="let el of geometry.subDays.data">
+      <path [attr.d]="el.progressPath"></path>
+    </g>
+  </g>
+  <g #daysText>
+    <g *ngFor="let el of geometry.subDays.data; let i=index;">
+      <path [attr.d]="el.textPath" [attr.id]="'daysText'+category+i" fill="none"></path>
+      <text>
+      <textPath [attr.href]="'#daysText'+category+i" 
+        font-size="3" 
+        font-family="sans-serif" 
+        [attr.fill]="colorScheme.daysText" 
+        text-anchor="middle" 
+        startOffset="50%">{{el.text}}</textPath>
+      </text>
+    </g>
+  </g>
+  <circle cx="0" cy="0" r="0.2" stroke="black" stroke-width="0.1" fill="white"></circle> 
+</svg>
+
