@@ -20,7 +20,6 @@ All this information can be displayed on a clock whose hands move faster dependi
 If you enter your pet's name and date of birth, the adjusted age will be calculated.
 For reference, a second regular clock is shown.
 
-The image below shows the graphical elements added to a regular clock.
 ![Pet Clock Help](/PetClockHelp.png)
 
 ## Technology
