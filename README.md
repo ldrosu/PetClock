@@ -33,4 +33,6 @@ This project is meant as an illustration of how to use the following technologie
 * redux (state management),
 * local storage (persistent state).
 
+## Live app
+
 The app can be viewed in action [here](https://ldrosu.github.io/PetClock/).
