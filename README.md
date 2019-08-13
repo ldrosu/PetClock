@@ -23,6 +23,7 @@ For reference, a second regular clock is shown. As you can see the time flies fa
 The image below shows the graphical elements added to a regular clock.
 ![Pet Clock Help](/PetClockHelp.png)
 
+
 ##Technology
 
 This project was generated is meant as an illustration of how to use the following technologies in an angular application:
@@ -34,4 +35,4 @@ This project was generated is meant as an illustration of how to use the followi
 * redux (state management),
 * local storage (persistent state).
 
-The app can be viewed at [Pet Clock](https://ldrosu.github.io/PetClock/) .
+The app can be viewed in action [here](https://ldrosu.github.io/PetClock/).
