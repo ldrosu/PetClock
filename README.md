@@ -18,7 +18,7 @@ If you take the seven to one ratio as an example, it means that:
  
 All this information can be displayed on a clock whose hands move faster depending on the pet type. 
 If you enter your pet's name and date of birth, the adjusted age will be calculated.
-For reference, a second regular clock is shown. As you can see the time flies faster for your pet.  
+For reference, a second regular clock is shown.
 
 The image below shows the graphical elements added to a regular clock.
 ![Pet Clock Help](/PetClockHelp.png)
