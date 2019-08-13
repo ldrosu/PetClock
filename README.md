@@ -1,27 +1,37 @@
 # PetClock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+## About
 
-## Development server
+We all heard the term *"dog years"*, or the phrase *"one year for your dog is seven years for you"*,
+which simply means that your dog has a shorter life expectancy then you. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Is there a way to be more precise then that? After all, 
+small dogs live longer then large dogs. How about you have a cat or a bird?
+Just enter the type of your pet and the date of birth and you will know its *"pet age"*.
 
-## Code scaffolding
+Another way to look at this is that your pet lives a **faster** life, not a **shorter** one.
+If you take the seven to one ratio as an example, it means that:
+* one second for you is seven seconds for him, 
+* one minute for you is seven minutes for him, 
+* one hour for you is seven hours for him, 
+* finally, he lives seven days in one of yours. 
+ 
+All this information can be displayed on a clock whose hands move faster depending on the pet type. 
+If you enter your pet's name and date of birth, the adjusted age will be calculated.
+For reference, a second regular clock is shown. As you can see the time flies faster for your pet.  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The image below shows the graphical elements added to a regular clock.
+![Pet Clock Help](/PetClockHelp.png)
 
-## Build
+##Technology
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+This project was generated is meant as an illustration of how to use the following technologies in an angular application:
+* svg (with binding),
+* d3 (animation of graphical elements),
+* moment (complex date time calculations),
+* angular material (info and settings tabs),
+* angular flex-layout,
+* redux (state management),
+* local storage (persistent state).
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The app can be viewed at [Pet Clock](https://ldrosu.github.io/PetClock/) .
