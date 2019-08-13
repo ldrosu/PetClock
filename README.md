@@ -23,10 +23,9 @@ For reference, a second regular clock is shown. As you can see the time flies fa
 The image below shows the graphical elements added to a regular clock.
 ![Pet Clock Help](/PetClockHelp.png)
 
+## Technology
 
-##Technology
-
-This project was generated is meant as an illustration of how to use the following technologies in an angular application:
+This project is meant as an illustration of how to use the following technologies in an angular application:
 * svg (with binding),
 * d3 (animation of graphical elements),
 * moment (complex date time calculations),
